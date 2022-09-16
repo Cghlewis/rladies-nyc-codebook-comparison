@@ -31,40 +31,7 @@ https://gss.norc.org/Documents/codebook/GSS%202021%20Codebook%20R1.pdf
 :::
 
 ::: {.notes}
-One type of documentation is a codebook. A codebook is often used to document survey instruments. It describes the contents, structure, and layout of a data file. A codebook enables the user to quickly ascertain some of the details about a dataset before downloading the file. In addition to this being a useful document for your collaborators to understand the data you have given them, it is also a useful document for you in that it facilitates discovery of errors (such as miscoded values). 
-:::
-
-
-## Codebook vs Data Dictionary
-
-:::: {.columns}
-
-::: {.column width="50%"}
-
-**Codebook**
-
-![](img/codebook-highlight-2.PNG)
-
-:::
-
-::: {.column width="50%"}
-
-**Data Dictionary**
-
-![](img/data-dictionary.PNG)
-
-:::
-
-::::
-
-::: {.notes}
-Although the terms data dictionary and codebook are oftentimes used interchangeably, I wanted to differentiate between a codebook and a data dictionary.
-
-They are both types of documentation and they both contain variable level information. However, a codebook, as I am using the term here, is a text document, while a data-dictionary is typically presented in tabular form (like in a spreadsheet). Since it is a text document, a codebook may have more than just variable level information. It may also have project level information like how data was collected and who data was collected on.
-
-A codebook is usually created after data is collected because it is representation of what already exists in the data, while a data dictionary can be created before you ever collect data, as sort of a roadmap for what you expect your final data to look like. And again, while these two documents are similar, I think the defining difference between the two is the presence of these summary statistics, that allow a user to explore statistics about the data without ever opening the files.
-
-Both are helpful forms of documentation but today we are going to talk about codebooks.
+One type of documentation is a codebook. A codebook is often used to document survey instruments. It describes the contents, structure, and layout of a data file. A codebook enables the user to quickly ascertain some of the details about a dataset before downloading the file. 
 :::
 
 ## Criteria {.smaller}
@@ -105,15 +72,13 @@ Both are helpful forms of documentation but today we are going to talk about cod
 :::
 
 ::: {.notes}
-- So I started searching for R packages that produce codebooks. I initially found and reviewed 10 different packages and I narrowed this presentation down to 4 based on 3 criteria
-- I work with a lot of academics who use SPSS and Stata and it is important to me that the package integrates well with data that has embedded metadata. Also, some data repositories, such as ICPSR, like data to be submitted with this embedded metadata so another incentive to work with this type of data.
-- While data sharing initiatives often suggest exporting metadata in a machine-readable format, such as xml, I was looking for something more human readable at this point. And also I know that many repositories, again such as ICPSR or National Archive of Criminal Justice Data, allow you to deposit codebooks in the form of Word documents, ASCII, or PDF formats. 
-- These are the criteria I think are important for getting a holistic picture of what is going on in your data. You can review ICPSR recommendations, as well as metadata standards developed by organizations such as the Data Documentation Initiative (DDI) to see what other metadata is recommended and what is recommended by field of study.
+- So I started searching for R packages that produce codebooks so I did not have to make these by hand. I initially found and reviewed 10 different packages and I narrowed this presentation down to 4 based on 3 criteria
+- I work with a lot of academics who use SPSS and Stata and it is important to me that the package integrates well with data that has embedded metadata (like embedded variable and value labels).
+- I wanted the codebook to be human readable
+- These are 15 summary statistics I think are important for getting a holistic picture of what is going on in your data.
 :::
 
 ## Example Data {.smaller}
-
-<br>
 
 `Pet Ownership and Attachment Survey`
 
@@ -123,25 +88,31 @@ Both are helpful forms of documentation but today we are going to talk about cod
 #|fig.align: center
 
 source("data.R")
-gt::gt(head(survey))
+gt::gt(head(survey, n=4))
 
 ```
+
+- pet_1: Within your family, your pet likes you best
+- pet_2: You talk to your pet as a friend
+- pet_3: You buy presents for your pet 
+
+(1 = almost never, 2 = sometimes, 3 = often, 4 = almost always, -99 = missing response)
 
 ::: footer
 https://www.researchgate.net/figure/CENSHARE-attachment-scale-answers-for-favourite-pet-reported-as-owned-by-child_tbl3_236738494
 :::
 
 ::: {.notes}
-Before I we review the packages, I wanted to introduce some example data we are going to use. These are made up responses to a few survey items that I found online about pet ownership and attachment.
+Before we review the packages, I wanted to introduce some example data I used to test out our 4 codebook packages. These are made up responses to a few survey items that I found online about pet ownership and attachment and I thought they were fun questions to work with. We have 3 questions about pet ownership, the first one is ...
 :::
 
 
 ## Metadata {.smaller}
 
-pet_1
 
 ```{r}
 #| echo: FALSE
+#| eval: FALSE
 #| class-output: out
 #| class-source: src
 
@@ -153,10 +124,10 @@ survey %>%
 
 ```
 
-pet_2
 
 ```{r}
 #| echo: FALSE
+#| eval: FALSE
 #| class-output: out
 #| class-source: src
 
@@ -166,10 +137,10 @@ survey %>%
 
 ```
 
-pet_3
 
 ```{r}
 #| echo: FALSE
+#| eval: FALSE
 #| class-output: out
 #| class-source: src
 
@@ -178,6 +149,8 @@ survey %>%
   str()
 
 ```
+
+![](img/haven_labelled.png){fig-align="center"}
 
 ::: {.notes}
 We can see here that our data has some embedded metadata. Our three main survey items are all class haven labelled and you can see the actual question wording is embedded as variable labels, and the response options are embedded as value labels. We also have some user-defined missing values (a value of -99)
@@ -188,7 +161,8 @@ We can see here that our data has some embedded metadata. Our three main survey 
 ![](img/compare.PNG){fig-align="center"}
 
 ::: {.notes}
-I am going to give you a quick overview of 5 R packages that I have found are useful for developing codebooks that you can export and share with collaborators.
+This table gives you a quick overview of what statistics can be exported by each package. But we are going to go through each package one by one now.
+You can review samples of the code and output from each of these packages in my github repo linked in the footer of these slides as well
 :::
 
 ## `codebookr::codebook()`
@@ -212,6 +186,7 @@ print(study_codebook, "codebookr.docx")
 ```
 
 ::: {.notes}
+- The codebookr has one function that allows you to create a codebook, and that function is "codebook"
 - The codebook function creates an rdocx object using the flextable and officer packages under the hood which you can then print to a word document using the print function
 :::
 
@@ -243,8 +218,8 @@ https://brad-cannell.github.io/codebookr/#numeric-variables
 
 ::: {.notes}
 - Which makes it easy to manipulate after you export in case there are additional pieces of information you want to add
-- It works really well with haven labelled data and recognized all of my embedded metadata such as value labels, variable labels and the user-defined missing codes
-- There are options to add variable attributes such as labels if your data does not come in with metadata added already or you can add additional metadata such as variable skip patterns to be added to your code book
+- It works really well with haven labelled data and recognized all of my embedded metadata
+- There are options to add variable attributes such as labels if your data does not come in with metadata added already or you can add additional metadata such as variable skip patterns
 - It provided all of the summary statistics I was looking for
 - The function has arguments to add project metadata such as a title, author and project description
 :::
@@ -281,7 +256,9 @@ codebook::codebook(survey)
 :::
 
 ::: {.notes}
-There are a few different functions you can use to build your codebook within the codebook package but ultimately the codebook function is the one that creates your codebook
+The new_codebook_rmd function creates a pre-populated .rmd file for you to work in (this image here is what the rmd file looks like)
+
+And then within that rmd there are a few different functions you can use to build your codebook but ultimately the codebook function is the one that creates your codebook
 
 You can then render the .Rmd file to get your full codebook
 :::
@@ -298,7 +275,7 @@ You can then render the .Rmd file to get your full codebook
 - Works *fairly* well with `haven labelled` data
 - Options to add additional variable attributes
 - Prints some of the summary statistics (not all)
-- Provides additional information including visualizations and scale reliability estimates
+- Provides additional statistics such as scale reliability estimates
 :::
 
 ::: {.column width="50%"}
@@ -314,12 +291,11 @@ https://rubenarslan.github.io/codebook/articles/codebook_tutorial.html#releasing
 :::
 
 ::: {.notes}
-- Although I had trouble getting it to print to pdf. The html document also has json blocks which allow this file to be machine readable which is a bonus for improving searchability if you plan to share in a place like a repository
-- The only thing I struggled with is getting the function to recognize user defined missing values such as -999 without adding additional arguments within the codebook function that would not really work in all situations
-- There are options to add variable attributes such as labels if your data does not come in with metadata added already
-- It provides most of the summary statistics I was looking for. It provides the N per response option, but not in a table format. It provides it in a bar graph format.
-- It is missing a few statistics I was looking for like % per response option categorys.
-- This package does howeve provide some additional statistics that may be beneficial to some people such as visualizations and scale reliability estimates like Omega and Coefficient Alpha.
+- ...
+- The only thing I struggled with is getting the function to recognize haven labelled user defined missing values
+- There are options to add variable attributes if your data does not come in with metadata added already
+- It provides most of the summary statistics I was looking for. It was just missing a few.
+- This package does however provide some additional statistics that may be beneficial to some people such as scale reliability estimates.
 :::
 
 ## `memisc::codebook()`
@@ -367,10 +343,10 @@ https://www.elff.eu/software/memisc/manual/codebook/
 :::
 
 ::: {.notes}
-- I like the simplicity of this package. It just prints a very simple but clear text file
-- It works really well with haven labelled data and recognized all of my embedded metadata such as value labels, variable labels and the user-defined missing codes
-- There are options to add variable attributes such as labels if your data does not come in with metadata added
-- It provided almost all of the summary statistics I was looking for except for the total valid N per variable and the total missing N per variable
+- I like the simplicity of this package. It prints a very simple but clear text file
+- It works really well with haven labelled data and recognized all of my embedded metadata
+- There are options to add variable attributes if your data does not come in with metadata added
+- It provided almost all of the summary statistics, just missing a few.
 - Provides additional statistics such as skewness and kurtosis
 :::
 
@@ -391,8 +367,11 @@ sjPlot::view_df(survey,
 ```
 
 ::: {.notes}
-There are several arguments for the view_df function but I have included the ones that get me closest to the statistics that I was looking for
-This then exports a codebook to html and I don't think it exports to any other file type which is not ideal for what I was looking for but it may be great for what others are looking for
+
+The view_df function creates our codebook here
+
+There are several arguments for this function but I included the ones that got me closest to the statistics that I was looking for.  
+
 :::
 
 ## `sjPlot::view_df()` {.smaller}
@@ -421,9 +400,9 @@ https://strengejacke.github.io/sjPlot/reference/view_df.html
 :::
 
 ::: {.notes}
-- Like I said it prints to an html file which might be great for some purposes and less great for others. It prints in more of a tabular layout which is totally fine, it still displays your typical codebook information.
+- This function prints to an html file which might be great for some purposes and less great for others.
 - It works well with haven labelled, it recognizes all of my embedded metadata
-- It includes almost all of the summary statistics I was looking for except total valid N and the mean for continuous variables
+- It includes almost all of the summary statistics I was looking for, just missing a few.
 - There are several argument options that you can include to control the level of detail you want to show in your codebook which is nice
 :::
 
@@ -434,14 +413,14 @@ You can see a table of all 10 packages I reviewed on [GitHub](https://cghlewis.g
 ![](img/compare_all.PNG){fig-align="center-x"}
 
 ::: {.notes}
-Like I mentionded, I initially reviewed 10 packages but narrowed down to the 4 I showed you today because a) they either didn't work well with haven labelled data or b) they didn't meet enough of the criteria I was looking for. But if you are interested, you can review a table of all the packages I tried on GitHub
+Like I mentioned, I initially reviewed 10 packages but narrowed down to the 4 I showed you today because a) they either didn't work well with haven labelled data or b) they didn't meet enough of the criteria I was looking for. But if you are interested, you can review a table of all the packages I tried on GitHub
 :::
 
 ## Thank you!
 
 <br>
 
-`r fontawesome::fa("link")` [crystal-lewis.com](https://www.crystal-lewis.com/)
+`r fontawesome::fa("link")` [cghlewis.com](https://www.cghlewis.com/)
 
 `r fontawesome::fa("twitter")` [\@Cghlewis](https://twitter.com/https://twitter.com/Cghlewis)
 

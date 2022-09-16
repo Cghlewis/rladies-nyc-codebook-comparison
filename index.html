@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="rladies-nyc-codebook_files/libs/clipboard/clipboard.min.js"></script>
-<script src="rladies-nyc-codebook_files/libs/quarto-html/tabby.min.js"></script>
-<script src="rladies-nyc-codebook_files/libs/quarto-html/popper.min.js"></script>
-<script src="rladies-nyc-codebook_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="rladies-nyc-codebook_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="rladies-nyc-codebook_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="rladies-nyc-codebook_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/tabby.min.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.1.163">
 
   <meta name="author" content="Crystal Lewis">
@@ -14,8 +14,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="rladies-nyc-codebook_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="rladies-nyc-codebook_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -93,11 +93,11 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="rladies-nyc-codebook_files/libs/revealjs/dist/theme/quarto.css" id="theme">
-  <link href="rladies-nyc-codebook_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="rladies-nyc-codebook_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="rladies-nyc-codebook_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="rladies-nyc-codebook_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -419,35 +419,7 @@
 <p>https://gss.norc.org/Documents/codebook/GSS%202021%20Codebook%20R1.pdf</p>
 </div>
 <aside class="notes">
-<p>One type of documentation is a codebook. A codebook is often used to document survey instruments. It describes the contents, structure, and layout of a data file. A codebook enables the user to quickly ascertain some of the details about a dataset before downloading the file. In addition to this being a useful document for your collaborators to understand the data you have given them, it is also a useful document for you in that it facilitates discovery of errors (such as miscoded values).</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="codebook-vs-data-dictionary" class="slide level2">
-<h2>Codebook vs Data Dictionary</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>Codebook</strong></p>
-<p><img data-src="img/codebook-highlight-2.PNG"></p>
-</div><div class="column" style="width:50%;">
-<p><strong>Data Dictionary</strong></p>
-<p><img data-src="img/data-dictionary.PNG"></p>
-</div>
-</div>
-<aside class="notes">
-<p>Although the terms data dictionary and codebook are oftentimes used interchangeably, I wanted to differentiate between a codebook and a data dictionary.</p>
-<p>They are both types of documentation and they both contain variable level information. However, a codebook, as I am using the term here, is a text document, while a data-dictionary is typically presented in tabular form (like in a spreadsheet). Since it is a text document, a codebook may have more than just variable level information. It may also have project level information like how data was collected and who data was collected on.</p>
-<p>A codebook is usually created after data is collected because it is representation of what already exists in the data, while a data dictionary can be created before you ever collect data, as sort of a roadmap for what you expect your final data to look like. And again, while these two documents are similar, I think the defining difference between the two is the presence of these summary statistics, that allow a user to explore statistics about the data without ever opening the files.</p>
-<p>Both are helpful forms of documentation but today we are going to talk about codebooks.</p>
+<p>One type of documentation is a codebook. A codebook is often used to document survey instruments. It describes the contents, structure, and layout of a data file. A codebook enables the user to quickly ascertain some of the details about a dataset before downloading the file.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -492,10 +464,10 @@
 </div>
 <aside class="notes">
 <ul>
-<li>So I started searching for R packages that produce codebooks. I initially found and reviewed 10 different packages and I narrowed this presentation down to 4 based on 3 criteria</li>
-<li>I work with a lot of academics who use SPSS and Stata and it is important to me that the package integrates well with data that has embedded metadata. Also, some data repositories, such as ICPSR, like data to be submitted with this embedded metadata so another incentive to work with this type of data.</li>
-<li>While data sharing initiatives often suggest exporting metadata in a machine-readable format, such as xml, I was looking for something more human readable at this point. And also I know that many repositories, again such as ICPSR or National Archive of Criminal Justice Data, allow you to deposit codebooks in the form of Word documents, ASCII, or PDF formats.</li>
-<li>These are the criteria I think are important for getting a holistic picture of what is going on in your data. You can review ICPSR recommendations, as well as metadata standards developed by organizations such as the Data Documentation Initiative (DDI) to see what other metadata is recommended and what is recommended by field of study.</li>
+<li>So I started searching for R packages that produce codebooks so I did not have to make these by hand. I initially found and reviewed 10 different packages and I narrowed this presentation down to 4 based on 3 criteria</li>
+<li>I work with a lot of academics who use SPSS and Stata and it is important to me that the package integrates well with data that has embedded metadata (like embedded variable and value labels).</li>
+<li>I wanted the codebook to be human readable</li>
+<li>These are 15 summary statistics I think are important for getting a holistic picture of what is going on in your data.</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -511,17 +483,16 @@
 </section>
 <section id="example-data" class="slide level2 smaller">
 <h2>Example Data</h2>
-<p><br></p>
 <p><code>Pet Ownership and Attachment Survey</code></p>
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="aienzzgrrc" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="inbthikdiq" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-:where(#aienzzgrrc) .gt_table {
+:where(#inbthikdiq) .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -546,7 +517,7 @@
   border-left-color: #D3D3D3;
 }
 
-:where(#aienzzgrrc) .gt_heading {
+:where(#inbthikdiq) .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -558,7 +529,7 @@
   border-right-color: #D3D3D3;
 }
 
-:where(#aienzzgrrc) .gt_title {
+:where(#inbthikdiq) .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -570,7 +541,7 @@
   border-bottom-width: 0;
 }
 
-:where(#aienzzgrrc) .gt_subtitle {
+:where(#inbthikdiq) .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -582,13 +553,13 @@
   border-top-width: 0;
 }
 
-:where(#aienzzgrrc) .gt_bottom_border {
+:where(#inbthikdiq) .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-:where(#aienzzgrrc) .gt_col_headings {
+:where(#inbthikdiq) .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -603,7 +574,7 @@
   border-right-color: #D3D3D3;
 }
 
-:where(#aienzzgrrc) .gt_col_heading {
+:where(#inbthikdiq) .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -623,7 +594,7 @@
   overflow-x: hidden;
 }
 
-:where(#aienzzgrrc) .gt_column_spanner_outer {
+:where(#inbthikdiq) .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -635,15 +606,15 @@
   padding-right: 4px;
 }
 
-:where(#aienzzgrrc) .gt_column_spanner_outer:first-child {
+:where(#inbthikdiq) .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-:where(#aienzzgrrc) .gt_column_spanner_outer:last-child {
+:where(#inbthikdiq) .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-:where(#aienzzgrrc) .gt_column_spanner {
+:where(#inbthikdiq) .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -655,7 +626,7 @@
   width: 100%;
 }
 
-:where(#aienzzgrrc) .gt_group_heading {
+:where(#inbthikdiq) .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -680,7 +651,7 @@
   vertical-align: middle;
 }
 
-:where(#aienzzgrrc) .gt_empty_group_heading {
+:where(#inbthikdiq) .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -695,15 +666,15 @@
   vertical-align: middle;
 }
 
-:where(#aienzzgrrc) .gt_from_md > :first-child {
+:where(#inbthikdiq) .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-:where(#aienzzgrrc) .gt_from_md > :last-child {
+:where(#inbthikdiq) .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-:where(#aienzzgrrc) .gt_row {
+:where(#inbthikdiq) .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -722,7 +693,7 @@
   overflow-x: hidden;
 }
 
-:where(#aienzzgrrc) .gt_stub {
+:where(#inbthikdiq) .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -735,7 +706,7 @@
   padding-right: 5px;
 }
 
-:where(#aienzzgrrc) .gt_stub_row_group {
+:where(#inbthikdiq) .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -749,11 +720,11 @@
   vertical-align: top;
 }
 
-:where(#aienzzgrrc) .gt_row_group_first td {
+:where(#inbthikdiq) .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-:where(#aienzzgrrc) .gt_summary_row {
+:where(#inbthikdiq) .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -763,16 +734,16 @@
   padding-right: 5px;
 }
 
-:where(#aienzzgrrc) .gt_first_summary_row {
+:where(#inbthikdiq) .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-:where(#aienzzgrrc) .gt_first_summary_row.thick {
+:where(#inbthikdiq) .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-:where(#aienzzgrrc) .gt_last_summary_row {
+:where(#inbthikdiq) .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -782,7 +753,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-:where(#aienzzgrrc) .gt_grand_summary_row {
+:where(#inbthikdiq) .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -792,7 +763,7 @@
   padding-right: 5px;
 }
 
-:where(#aienzzgrrc) .gt_first_grand_summary_row {
+:where(#inbthikdiq) .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -802,11 +773,11 @@
   border-top-color: #D3D3D3;
 }
 
-:where(#aienzzgrrc) .gt_striped {
+:where(#inbthikdiq) .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-:where(#aienzzgrrc) .gt_table_body {
+:where(#inbthikdiq) .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -815,7 +786,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-:where(#aienzzgrrc) .gt_footnotes {
+:where(#inbthikdiq) .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -829,7 +800,7 @@
   border-right-color: #D3D3D3;
 }
 
-:where(#aienzzgrrc) .gt_footnote {
+:where(#inbthikdiq) .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -838,7 +809,7 @@
   padding-right: 5px;
 }
 
-:where(#aienzzgrrc) .gt_sourcenotes {
+:where(#inbthikdiq) .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -852,7 +823,7 @@
   border-right-color: #D3D3D3;
 }
 
-:where(#aienzzgrrc) .gt_sourcenote {
+:where(#inbthikdiq) .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -860,36 +831,36 @@
   padding-right: 5px;
 }
 
-:where(#aienzzgrrc) .gt_left {
+:where(#inbthikdiq) .gt_left {
   text-align: left;
 }
 
-:where(#aienzzgrrc) .gt_center {
+:where(#inbthikdiq) .gt_center {
   text-align: center;
 }
 
-:where(#aienzzgrrc) .gt_right {
+:where(#inbthikdiq) .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-:where(#aienzzgrrc) .gt_font_normal {
+:where(#inbthikdiq) .gt_font_normal {
   font-weight: normal;
 }
 
-:where(#aienzzgrrc) .gt_font_bold {
+:where(#inbthikdiq) .gt_font_bold {
   font-weight: bold;
 }
 
-:where(#aienzzgrrc) .gt_font_italic {
+:where(#inbthikdiq) .gt_font_italic {
   font-style: italic;
 }
 
-:where(#aienzzgrrc) .gt_super {
+:where(#inbthikdiq) .gt_super {
   font-size: 65%;
 }
 
-:where(#aienzzgrrc) .gt_two_val_uncert {
+:where(#inbthikdiq) .gt_two_val_uncert {
   display: inline-block;
   line-height: 1em;
   text-align: right;
@@ -898,31 +869,31 @@
   margin-left: 0.1em;
 }
 
-:where(#aienzzgrrc) .gt_footnote_marks {
+:where(#inbthikdiq) .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-:where(#aienzzgrrc) .gt_asterisk {
+:where(#inbthikdiq) .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-:where(#aienzzgrrc) .gt_slash_mark {
+:where(#inbthikdiq) .gt_slash_mark {
   font-size: 0.7em;
   line-height: 0.7em;
   vertical-align: 0.15em;
 }
 
-:where(#aienzzgrrc) .gt_fraction_numerator {
+:where(#inbthikdiq) .gt_fraction_numerator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: 0.45em;
 }
 
-:where(#aienzzgrrc) .gt_fraction_denominator {
+:where(#inbthikdiq) .gt_fraction_denominator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: -0.05em;
@@ -945,37 +916,25 @@
 <td class="gt_row gt_right">12</td>
 <td class="gt_row gt_center">1</td>
 <td class="gt_row gt_center">2</td>
-<td class="gt_row gt_center">  1</td>
+<td class="gt_row gt_center">1</td>
 <td class="gt_row gt_center">  1</td></tr>
     <tr><td class="gt_row gt_left">22</td>
 <td class="gt_row gt_right">14</td>
 <td class="gt_row gt_center">2</td>
 <td class="gt_row gt_center">2</td>
-<td class="gt_row gt_center">  2</td>
+<td class="gt_row gt_center">2</td>
 <td class="gt_row gt_center">-99</td></tr>
     <tr><td class="gt_row gt_left">13</td>
 <td class="gt_row gt_right">15</td>
 <td class="gt_row gt_center">1</td>
 <td class="gt_row gt_center">4</td>
-<td class="gt_row gt_center">  4</td>
+<td class="gt_row gt_center">4</td>
 <td class="gt_row gt_center">  1</td></tr>
     <tr><td class="gt_row gt_left">11</td>
 <td class="gt_row gt_right">13</td>
 <td class="gt_row gt_center">1</td>
 <td class="gt_row gt_center">2</td>
-<td class="gt_row gt_center">  1</td>
-<td class="gt_row gt_center">  1</td></tr>
-    <tr><td class="gt_row gt_left">15</td>
-<td class="gt_row gt_right">16</td>
-<td class="gt_row gt_center">2</td>
-<td class="gt_row gt_center">2</td>
-<td class="gt_row gt_center">-99</td>
-<td class="gt_row gt_center">  3</td></tr>
-    <tr><td class="gt_row gt_left">20</td>
-<td class="gt_row gt_right">17</td>
 <td class="gt_row gt_center">1</td>
-<td class="gt_row gt_center">4</td>
-<td class="gt_row gt_center">  4</td>
 <td class="gt_row gt_center">  1</td></tr>
   </tbody>
   
@@ -984,11 +943,17 @@
 </div>
 </div>
 </div>
+<ul>
+<li>pet_1: Within your family, your pet likes you best</li>
+<li>pet_2: You talk to your pet as a friend</li>
+<li>pet_3: You buy presents for your pet</li>
+</ul>
+<p>(1 = almost never, 2 = sometimes, 3 = often, 4 = almost always, -99 = missing response)</p>
 <div class="footer">
 <p>https://www.researchgate.net/figure/CENSHARE-attachment-scale-answers-for-favourite-pet-reported-as-owned-by-child_tbl3_236738494</p>
 </div>
 <aside class="notes">
-<p>Before I we review the packages, I wanted to introduce some example data we are going to use. These are made up responses to a few survey items that I found online about pet ownership and attachment.</p>
+<p>Before we review the packages, I wanted to introduce some example data I used to test out our 4 codebook packages. These are made up responses to a few survey items that I found online about pet ownership and attachment and I thought they were fun questions to work with. We have 3 questions about pet ownership, the first one is …</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1003,40 +968,17 @@
 </section>
 <section id="metadata" class="slide level2 smaller">
 <h2>Metadata</h2>
-<p>pet_1</p>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource out number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>tibble [12 x 1] (S3: tbl_df/tbl/data.frame)</span>
-<span id="cb1-2"><a href="#cb1-2"></a> $ pet_1: dbl+lbl [1:12] 2, 2, 4, 2, 2, 4, 2, 2, 4, 2, 2, 4</span>
-<span id="cb1-3"><a href="#cb1-3"></a>   ..@ labels   : Named num [1:5] 1 2 3 4 -99</span>
-<span id="cb1-4"><a href="#cb1-4"></a>   .. ..- attr(*, "names")= chr [1:5] "almost never" "sometimes" "often" "almost always" ...</span>
-<span id="cb1-5"><a href="#cb1-5"></a>   ..@ na_values: num -99</span>
-<span id="cb1-6"><a href="#cb1-6"></a>   ..@ label    : chr "Within your family, your pet likes you best"</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
 </div>
-</div>
-<p>pet_2</p>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource out number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href="#cb2-1"></a>tibble [12 x 1] (S3: tbl_df/tbl/data.frame)</span>
-<span id="cb2-2"><a href="#cb2-2"></a> $ pet_2: dbl+lbl [1:12]   1,   2,   4,   1, -99,   4,   1,   3,   4,   1,   3,   4</span>
-<span id="cb2-3"><a href="#cb2-3"></a>   ..@ labels   : Named num [1:5] 1 2 3 4 -99</span>
-<span id="cb2-4"><a href="#cb2-4"></a>   .. ..- attr(*, "names")= chr [1:5] "almost never" "sometimes" "often" "almost always" ...</span>
-<span id="cb2-5"><a href="#cb2-5"></a>   ..@ na_values: num -99</span>
-<span id="cb2-6"><a href="#cb2-6"></a>   ..@ label    : chr "You talk to your pet as a friend"</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
 </div>
-</div>
-<p>pet_3</p>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource out number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a href="#cb3-1"></a>tibble [12 x 1] (S3: tbl_df/tbl/data.frame)</span>
-<span id="cb3-2"><a href="#cb3-2"></a> $ pet_3: dbl+lbl [1:12]   1, -99,   1,   1,   3,   1,   1,   3,   1,   1,   3,   1</span>
-<span id="cb3-3"><a href="#cb3-3"></a>   ..@ labels   : Named num [1:5] 1 2 3 4 -99</span>
-<span id="cb3-4"><a href="#cb3-4"></a>   .. ..- attr(*, "names")= chr [1:5] "almost never" "sometimes" "often" "almost always" ...</span>
-<span id="cb3-5"><a href="#cb3-5"></a>   ..@ na_values: num -99</span>
-<span id="cb3-6"><a href="#cb3-6"></a>   ..@ label    : chr "You buy presents for your pet"</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
 </div>
-</div>
-<aside class="notes">
+
+<img data-src="img/haven_labelled.png" class="r-stretch quarto-figure-center"><aside class="notes">
 <p>We can see here that our data has some embedded metadata. Our three main survey items are all class haven labelled and you can see the actual question wording is embedded as variable labels, and the response options are embedded as value labels. We also have some user-defined missing values (a value of -99)</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -1054,7 +996,7 @@
 <h2>Review of 4 packages</h2>
 
 <img data-src="img/compare.PNG" class="r-stretch quarto-figure-center"><aside class="notes">
-<p>I am going to give you a quick overview of 5 R packages that I have found are useful for developing codebooks that you can export and share with collaborators.</p>
+<p>This table gives you a quick overview of what statistics can be exported by each package. But we are going to go through each package one by one now. You can review samples of the code and output from each of these packages in my github repo linked in the footer of these slides as well</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1071,19 +1013,20 @@
 <h2><code>codebookr::codebook()</code></h2>
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>study_codebook <span class="ot">&lt;-</span> codebookr<span class="sc">::</span><span class="fu">codebook</span>(survey,</span>
-<span id="cb4-2"><a href="#cb4-2"></a>                    <span class="at">title =</span> <span class="st">"Pet Relationship Study"</span>, </span>
-<span id="cb4-3"><a href="#cb4-3"></a>                    <span class="at">subtitle =</span> <span class="st">"Various Authors"</span>, </span>
-<span id="cb4-4"><a href="#cb4-4"></a>                    <span class="at">description =</span> <span class="st">"This study was funded by </span></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="st">                    the Pet Society. Here is a basic </span></span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="st">                    description of our study, our methods, </span></span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="st">                    our sample, and protocols."</span>)</span>
-<span id="cb4-8"><a href="#cb4-8"></a></span>
-<span id="cb4-9"><a href="#cb4-9"></a></span>
-<span id="cb4-10"><a href="#cb4-10"></a><span class="fu">print</span>(study_codebook, <span class="st">"codebookr.docx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>study_codebook <span class="ot">&lt;-</span> codebookr<span class="sc">::</span><span class="fu">codebook</span>(survey,</span>
+<span id="cb1-2"><a href="#cb1-2"></a>                    <span class="at">title =</span> <span class="st">"Pet Relationship Study"</span>, </span>
+<span id="cb1-3"><a href="#cb1-3"></a>                    <span class="at">subtitle =</span> <span class="st">"Various Authors"</span>, </span>
+<span id="cb1-4"><a href="#cb1-4"></a>                    <span class="at">description =</span> <span class="st">"This study was funded by </span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="st">                    the Pet Society. Here is a basic </span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="st">                    description of our study, our methods, </span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="st">                    our sample, and protocols."</span>)</span>
+<span id="cb1-8"><a href="#cb1-8"></a></span>
+<span id="cb1-9"><a href="#cb1-9"></a></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="fu">print</span>(study_codebook, <span class="st">"codebookr.docx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <aside class="notes">
 <ul>
+<li>The codebookr has one function that allows you to create a codebook, and that function is “codebook”</li>
 <li>The codebook function creates an rdocx object using the flextable and officer packages under the hood which you can then print to a word document using the print function</li>
 </ul>
 <style type="text/css">
@@ -1120,8 +1063,8 @@
 <aside class="notes">
 <ul>
 <li>Which makes it easy to manipulate after you export in case there are additional pieces of information you want to add</li>
-<li>It works really well with haven labelled data and recognized all of my embedded metadata such as value labels, variable labels and the user-defined missing codes</li>
-<li>There are options to add variable attributes such as labels if your data does not come in with metadata added already or you can add additional metadata such as variable skip patterns to be added to your code book</li>
+<li>It works really well with haven labelled data and recognized all of my embedded metadata</li>
+<li>There are options to add variable attributes such as labels if your data does not come in with metadata added already or you can add additional metadata such as variable skip patterns</li>
 <li>It provided all of the summary statistics I was looking for</li>
 <li>The function has arguments to add project metadata such as a title, author and project description</li>
 </ul>
@@ -1144,19 +1087,20 @@
 <p><br></p>
 <p>Creates the pre-filled .Rmd document</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>codebook<span class="sc">::</span><span class="fu">new_codebook_rmd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>codebook<span class="sc">::</span><span class="fu">new_codebook_rmd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
 <p>Creates the codebook</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>codebook<span class="sc">::</span><span class="fu">codebook</span>(survey)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>codebook<span class="sc">::</span><span class="fu">codebook</span>(survey)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <p><img data-src="img/codebook_pkg_rmd.PNG"></p>
 </div>
 </div>
 <aside class="notes">
-<p>There are a few different functions you can use to build your codebook within the codebook package but ultimately the codebook function is the one that creates your codebook</p>
+<p>The new_codebook_rmd function creates a pre-populated .rmd file for you to work in (this image here is what the rmd file looks like)</p>
+<p>And then within that rmd there are a few different functions you can use to build your codebook but ultimately the codebook function is the one that creates your codebook</p>
 <p>You can then render the .Rmd file to get your full codebook</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -1180,7 +1124,7 @@
 <li>Works <em>fairly</em> well with <code>haven labelled</code> data</li>
 <li>Options to add additional variable attributes</li>
 <li>Prints some of the summary statistics (not all)</li>
-<li>Provides additional information including visualizations and scale reliability estimates</li>
+<li>Provides additional statistics such as scale reliability estimates</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p><img data-src="img/codebook_pkg.PNG"> <img data-src="img/codebook_pkg2.PNG" style="width:80.0%" data-fig-align="center"></p>
@@ -1191,12 +1135,11 @@
 </div>
 <aside class="notes">
 <ul>
-<li>Although I had trouble getting it to print to pdf. The html document also has json blocks which allow this file to be machine readable which is a bonus for improving searchability if you plan to share in a place like a repository</li>
-<li>The only thing I struggled with is getting the function to recognize user defined missing values such as -999 without adding additional arguments within the codebook function that would not really work in all situations</li>
-<li>There are options to add variable attributes such as labels if your data does not come in with metadata added already</li>
-<li>It provides most of the summary statistics I was looking for. It provides the N per response option, but not in a table format. It provides it in a bar graph format.</li>
-<li>It is missing a few statistics I was looking for like % per response option categorys.</li>
-<li>This package does howeve provide some additional statistics that may be beneficial to some people such as visualizations and scale reliability estimates like Omega and Coefficient Alpha.</li>
+<li>…</li>
+<li>The only thing I struggled with is getting the function to recognize haven labelled user defined missing values</li>
+<li>There are options to add variable attributes if your data does not come in with metadata added already</li>
+<li>It provides most of the summary statistics I was looking for. It was just missing a few.</li>
+<li>This package does however provide some additional statistics that may be beneficial to some people such as scale reliability estimates.</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -1214,11 +1157,11 @@
 <h2><code>memisc::codebook()</code></h2>
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>study_codebook <span class="ot">&lt;-</span> memisc<span class="sc">::</span><span class="fu">codebook</span>(survey)</span>
-<span id="cb7-2"><a href="#cb7-2"></a></span>
-<span id="cb7-3"><a href="#cb7-3"></a></span>
-<span id="cb7-4"><a href="#cb7-4"></a>memisc<span class="sc">::</span><span class="fu">Write</span>(study_codebook, <span class="at">file =</span> </span>
-<span id="cb7-5"><a href="#cb7-5"></a>                here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"code"</span>,<span class="st">"my_memisc_codebook.txt"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>study_codebook <span class="ot">&lt;-</span> memisc<span class="sc">::</span><span class="fu">codebook</span>(survey)</span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a></span>
+<span id="cb4-4"><a href="#cb4-4"></a>memisc<span class="sc">::</span><span class="fu">Write</span>(study_codebook, <span class="at">file =</span> </span>
+<span id="cb4-5"><a href="#cb4-5"></a>                here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"code"</span>,<span class="st">"my_memisc_codebook.txt"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <aside class="notes">
 <ul>
@@ -1257,10 +1200,10 @@
 </div>
 <aside class="notes">
 <ul>
-<li>I like the simplicity of this package. It just prints a very simple but clear text file</li>
-<li>It works really well with haven labelled data and recognized all of my embedded metadata such as value labels, variable labels and the user-defined missing codes</li>
-<li>There are options to add variable attributes such as labels if your data does not come in with metadata added</li>
-<li>It provided almost all of the summary statistics I was looking for except for the total valid N per variable and the total missing N per variable</li>
+<li>I like the simplicity of this package. It prints a very simple but clear text file</li>
+<li>It works really well with haven labelled data and recognized all of my embedded metadata</li>
+<li>There are options to add variable attributes if your data does not come in with metadata added</li>
+<li>It provided almost all of the summary statistics, just missing a few.</li>
 <li>Provides additional statistics such as skewness and kurtosis</li>
 </ul>
 <style type="text/css">
@@ -1279,16 +1222,17 @@
 <h2><code>sjPlot::view_df()</code></h2>
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>sjPlot<span class="sc">::</span><span class="fu">view_df</span>(survey,</span>
-<span id="cb8-2"><a href="#cb8-2"></a>                <span class="at">show.type =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb8-3"><a href="#cb8-3"></a>                <span class="at">show.frq =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb8-4"><a href="#cb8-4"></a>                <span class="at">show.prc =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb8-5"><a href="#cb8-5"></a>                <span class="at">show.na =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb8-6"><a href="#cb8-6"></a>                <span class="at">show.string.values =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb8-7"><a href="#cb8-7"></a>                <span class="at">file =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"code"</span>, <span class="st">"my_sjplot_codebook.html"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>sjPlot<span class="sc">::</span><span class="fu">view_df</span>(survey,</span>
+<span id="cb5-2"><a href="#cb5-2"></a>                <span class="at">show.type =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb5-3"><a href="#cb5-3"></a>                <span class="at">show.frq =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb5-4"><a href="#cb5-4"></a>                <span class="at">show.prc =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb5-5"><a href="#cb5-5"></a>                <span class="at">show.na =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb5-6"><a href="#cb5-6"></a>                <span class="at">show.string.values =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb5-7"><a href="#cb5-7"></a>                <span class="at">file =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"code"</span>, <span class="st">"my_sjplot_codebook.html"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <aside class="notes">
-<p>There are several arguments for the view_df function but I have included the ones that get me closest to the statistics that I was looking for This then exports a codebook to html and I don’t think it exports to any other file type which is not ideal for what I was looking for but it may be great for what others are looking for</p>
+<p>The view_df function creates our codebook here</p>
+<p>There are several arguments for this function but I included the ones that got me closest to the statistics that I was looking for.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1324,9 +1268,9 @@
 </div>
 <aside class="notes">
 <ul>
-<li>Like I said it prints to an html file which might be great for some purposes and less great for others. It prints in more of a tabular layout which is totally fine, it still displays your typical codebook information.</li>
+<li>This function prints to an html file which might be great for some purposes and less great for others.</li>
 <li>It works well with haven labelled, it recognizes all of my embedded metadata</li>
-<li>It includes almost all of the summary statistics I was looking for except total valid N and the mean for continuous variables</li>
+<li>It includes almost all of the summary statistics I was looking for, just missing a few.</li>
 <li>There are several argument options that you can include to control the level of detail you want to show in your codebook which is nice</li>
 </ul>
 <style type="text/css">
@@ -1346,7 +1290,7 @@
 <p>You can see a table of all 10 packages I reviewed on <a href="https://cghlewis.github.io/codebook-pkg-comparison/">GitHub</a></p>
 
 <img data-src="img/compare_all.PNG" class="r-stretch quarto-figure-center"><aside class="notes">
-<p>Like I mentionded, I initially reviewed 10 packages but narrowed down to the 4 I showed you today because a) they either didn’t work well with haven labelled data or b) they didn’t meet enough of the criteria I was looking for. But if you are interested, you can review a table of all the packages I tried on GitHub</p>
+<p>Like I mentioned, I initially reviewed 10 packages but narrowed down to the 4 I showed you today because a) they either didn’t work well with haven labelled data or b) they didn’t meet enough of the criteria I was looking for. But if you are interested, you can review a table of all the packages I tried on GitHub</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1362,7 +1306,7 @@
 <section id="thank-you" class="slide level2">
 <h2>Thank you!</h2>
 <p><br></p>
-<p><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path></svg> <a href="https://www.crystal-lewis.com/">crystal-lewis.com</a></p>
+<p><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path></svg> <a href="https://www.cghlewis.com/">cghlewis.com</a></p>
 <p><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg> <a href="https://twitter.com/https://twitter.com/Cghlewis">@Cghlewis</a></p>
 <p><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg> <a href="https://www.linkedin.com/in/crystal-lewis-922b4193/">linkedin.com/in/crystal-lewis-922b4193/</a></p>
 <p><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg> <a href="https://github.com/Cghlewis">github.com/Cghlewis</a></p>
@@ -1375,19 +1319,19 @@
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="rladies-nyc-codebook_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="index_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="rladies-nyc-codebook_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="rladies-nyc-codebook_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="rladies-nyc-codebook_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="rladies-nyc-codebook_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="rladies-nyc-codebook_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="rladies-nyc-codebook_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="rladies-nyc-codebook_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="rladies-nyc-codebook_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="rladies-nyc-codebook_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="index_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
