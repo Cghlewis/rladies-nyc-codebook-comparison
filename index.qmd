@@ -15,7 +15,7 @@ format:
 ## Documentation {background-image="img/share_data2.jpg"}
 
 ::: footer
-https://www.statnews.com/2019/11/18/data-sharing-clinical-trials-lessons-yoda-project/
+Image: Julien Eichinger/Adobe Stock
 :::
 
 ::: {.notes}
@@ -410,7 +410,7 @@ https://strengejacke.github.io/sjPlot/reference/view_df.html
 
 You can see a table of all 10 packages I reviewed on [GitHub](https://cghlewis.github.io/codebook-pkg-comparison/)
 
-![](img/compare_all.PNG){fig-align="center-x"}
+![](img/compare_all.PNG){fig-align="center"}
 
 ::: {.notes}
 Like I mentioned, I initially reviewed 10 packages but narrowed down to the 4 I showed you today because a) they either didn't work well with haven labelled data or b) they didn't meet enough of the criteria I was looking for. But if you are interested, you can review a table of all the packages I tried on GitHub
