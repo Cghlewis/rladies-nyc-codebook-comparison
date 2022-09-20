@@ -31,7 +31,7 @@ https://gss.norc.org/Documents/codebook/GSS%202021%20Codebook%20R1.pdf
 :::
 
 ::: {.notes}
-One type of documentation is a codebook. A codebook is often used to document survey instruments. It describes the contents, structure, and layout of a data file. A codebook enables the user to quickly ascertain some of the details about a dataset before downloading the file. 
+One type of documentation is a codebook. It is often used to document survey instruments. It describes the contents, structure, and layout of a data file. And it enables the user to quickly ascertain some of the details about a dataset without ever opening the file. 
 :::
 
 ## Criteria {.smaller}
@@ -103,7 +103,7 @@ https://www.researchgate.net/figure/CENSHARE-attachment-scale-answers-for-favour
 :::
 
 ::: {.notes}
-Before we review the packages, I wanted to introduce some example data I used to test out our 4 codebook packages. These are made up responses to a few survey items that I found online about pet ownership and attachment and I thought they were fun questions to work with. We have 3 questions about pet ownership, the first one is ...
+Before we review the packages, I wanted to introduce some example data I used to test out our codebook packages. These are made up responses to a few survey items that I found online about pet ownership and attachment and I thought they were fun questions to work with. We have 3 questions about pet ownership. And they all have this response option range of....
 :::
 
 
@@ -280,8 +280,9 @@ You can then render the .Rmd file to get your full codebook
 
 ::: {.column width="50%"}
 
-![](img/codebook_pkg.PNG)
-![](img/codebook_pkg2.PNG){width="80%" fig-align="center"}
+<br>
+
+![](img/codebook_pkg3.PNG)
 
 :::
 :::
@@ -313,7 +314,7 @@ memisc::Write(study_codebook, file =
 ```
 
 ::: {.notes}
-- The codebook function creates a codebook object which you can then write out to a text file
+- In this package the codebook function creates a codebook object which you can then write out to a text file
 :::
 
 ## `memisc::codebook()` {.smaller}
@@ -368,7 +369,7 @@ sjPlot::view_df(survey,
 
 ::: {.notes}
 
-The view_df function creates our codebook here
+The view_df function creates our codebook
 
 There are several arguments for this function but I included the ones that got me closest to the statistics that I was looking for.  
 
@@ -400,7 +401,7 @@ https://strengejacke.github.io/sjPlot/reference/view_df.html
 :::
 
 ::: {.notes}
-- This function prints to an html file which might be great for some purposes and less great for others.
+- This function only prints to an html file which might be great for some purposes and less great for others.
 - It works well with haven labelled, it recognizes all of my embedded metadata
 - It includes almost all of the summary statistics I was looking for, just missing a few.
 - There are several argument options that you can include to control the level of detail you want to show in your codebook which is nice
@@ -413,7 +414,7 @@ You can see a table of all 10 packages I reviewed on [GitHub](https://cghlewis.g
 ![](img/compare_all.PNG){fig-align="center"}
 
 ::: {.notes}
-Like I mentioned, I initially reviewed 10 packages but narrowed down to the 4 I showed you today because a) they either didn't work well with haven labelled data or b) they didn't meet enough of the criteria I was looking for. But if you are interested, you can review a table of all the packages I tried on GitHub
+Like I mentioned, I initially reviewed 10 packages but narrowed down to the 4 I showed you today because a) they either didn't work well with haven labelled data or b) they didn't meet enough of the criteria I was looking for. But if you are interested, you can review a table of all the packages I tried in my GitHub repo here
 :::
 
 ## Thank you!
