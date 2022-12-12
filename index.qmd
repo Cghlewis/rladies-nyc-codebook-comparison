@@ -158,7 +158,7 @@ We can see here that our data has some embedded metadata. Our three main survey 
 
 ## Review of 4 packages
 
-![](img/compare.PNG){fig-align="center"}
+![](img/compare_update.PNG){fig-align="center"}
 
 ::: {.notes}
 This table gives you a quick overview of what statistics can be exported by each package. But we are going to go through each package one by one now.
@@ -201,7 +201,7 @@ print(study_codebook, "codebookr.docx")
 - Prints to Word Document
 - Works well with `haven labelled` data
 - Options to add additional variable attributes
-- Prints all summary statistics 
+- Prints almost all summary statistics 
 - Can add overall project metadata
 :::
 
@@ -411,7 +411,7 @@ https://strengejacke.github.io/sjPlot/reference/view_df.html
 
 You can see a table of all 10 packages I reviewed on [GitHub](https://cghlewis.github.io/codebook-pkg-comparison/)
 
-![](img/compare_all.PNG){fig-align="center"}
+![](img/compare_all_update.PNG){fig-align="center"}
 
 ::: {.notes}
 Like I mentioned, I initially reviewed 10 packages but narrowed down to the 4 I showed you today because a) they either didn't work well with haven labelled data or b) they didn't meet enough of the criteria I was looking for. But if you are interested, you can review a table of all the packages I tried in my GitHub repo here
