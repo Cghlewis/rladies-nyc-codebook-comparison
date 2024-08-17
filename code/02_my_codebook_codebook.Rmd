@@ -1,0 +1,137 @@
+---
+title: "Codebook"
+output:
+  html_document:
+    toc: true
+    toc_depth: 4
+    toc_float: true
+    code_folding: 'hide'
+    self_contained: true
+  pdf_document:
+    toc: yes
+    toc_depth: 4
+    latex_engine: xelatex
+---
+
+```{r}
+
+library(tidyverse)
+library(labelled)
+
+# Read in data
+
+survey <- tibble::tribble(
+  ~participant_id, ~pet_1, ~pet_2, ~pet_3, ~pet_type, ~participant_age,
+  "10", 2, 1, 1, 1, 12,
+  "22", 2, 2, -99, 2, 14, 
+  "13", 4, 4, 1, 1, 15,
+  "11", 2, 1, 1, 1, 13,
+  "15", 2, -99, 3, 2, 16, 
+  "20", 4, 4, 1, 1, 17,
+  "14", 2, 1, 1, 1, 13,
+  "17", 2, 3, 3, 2, 16, 
+  "25", 4, 4, 1, 1, 17,
+  "27", 2, 1, 1, 1, 13,
+  "28", 2, 3, 3, 2, NA, 
+  "18", 4, 4, 1, 1, 11)
+
+
+# Read in data dictionary
+
+dict <- tibble::tribble(
+  ~var_name, ~label,
+  "participant_id", "Respondent study ID",
+  "participant_age", "How old are you?",
+  "pet_type", "What type of pet do you have",
+  "pet_1", "Within your family, your pet likes you best", 
+  "pet_2", "You talk to your pet as a friend",
+  "pet_3", "You buy presents for your pet")
+
+# Add value labels
+
+survey <- survey %>%
+  mutate(across(pet_1:pet_3, 
+                ~labelled(., labels = c(`almost never`=1, 
+                                                   sometimes=2, often=3, `almost always`=4,
+                                        `missing response` = -99)))) %>%
+  set_value_labels(pet_type = c(dog = 1, cat = 2)) %>%
+  mutate(across(pet_1:pet_3, ~(`na_values<-`
+                               (., c(-99)))))
+
+
+# Add variable labels to variables
+
+dict_labels <- dict %>%
+  select(var_name , label) %>%
+  deframe() %>%
+  as.list()
+
+survey <- survey %>%
+  set_variable_labels(.labels = dict_labels, .strict = FALSE)
+
+# Reorder
+
+var_order <- dict %>%
+  dplyr::select(var_name) %>%
+  dplyr::pull()
+
+# reorder
+
+survey <- survey %>%
+  relocate(all_of(var_order))
+
+codebook_data <- survey
+
+```
+
+
+Here, we're just setting a few options.
+
+```{r setup}
+knitr::opts_chunk$set(
+  warning = TRUE, # show warnings during codebook generation
+  message = TRUE, # show messages during codebook generation
+  error = TRUE, # do not interrupt codebook generation in case of errors,
+                # usually better for debugging
+  echo = TRUE  # show R code
+)
+ggplot2::theme_set(ggplot2::theme_bw())
+
+```
+
+Now, we're preparing our data for the codebook.
+
+```{r prepare_codebook}
+library(codebook)
+
+# to import an SPSS file from the same folder uncomment and edit the line below
+# codebook_data <- rio::import("mydata.sav")
+# for Stata
+# codebook_data <- rio::import("mydata.dta")
+# for CSV
+# codebook_data <- rio::import("mydata.csv")
+
+# omit the following lines, if your missing values are already properly labelled
+codebook_data <- detect_missing(codebook_data,
+    only_labelled = TRUE, # only labelled values are autodetected as
+                                   # missing
+    negative_values_are_missing = TRUE, # negative values are missing values
+    ninety_nine_problems = TRUE,   # 99/999 are missing values, if they
+                                   # are more than 5 MAD from the median
+    )
+
+# If you are not using formr, the codebook package needs to guess which items
+# form a scale. The following line finds item aggregates with names like this:
+# scale = scale_1 + scale_2R + scale_3R
+# identifying these aggregates allows the codebook function to
+# automatically compute reliabilities.
+# However, it will not reverse items automatically.
+codebook_data <- detect_scales(codebook_data)
+```
+
+
+Create codebook
+
+```{r codebook}
+codebook(codebook_data)
+```
